@@ -8,7 +8,7 @@ Anthony Leotta GitHub Home Page - Notes Tutorials READMEs Procedures HowTos : C+
 
 ## Notes
 
-1. [What is the anaconda base environment.](#what-is-the-anaconda-base-environment)
+1. [What is the anaconda base environment.](#note-1-what-is-the-anaconda-base-environment)
 
 ### Procedure 1. How to create a Anaconda Python Environment
 There are many ways to create a Python virtual environments, the advantage of using Anaconda is that you will not have to install a C compiler and build packages yourself.  Conda is stable and ahs few operational problems. (Note that install a C compiler on Windows using Visual Studio Code with also result in installing Python 2.7 and many other tools.)  If you want to get up and running ASAP, then Anaconda Python is a good choice.  There are other ways to manage packages and environments such as Poetry and PyEnv whic I will cover in other procedures.
@@ -103,3 +103,5 @@ When looking at this list of package I see the "Hollywood A-List" of Python pack
 Could it be #1 sqlite 3?
 
 Yes, that's right.  It's Python the only language with its own built-in in-memory file-based SQL relational database.  Instantaneously create as many relational databases as you need.  Most applications only need one, by the way. The fact that Python applications can use a relational database without installing any additional software only adds to the many people love the Python programming language.
+
+I think the main three packages are number one python, number two pip and number three setuptools.  The fact that a Python environment contains Python itself is the entire point of a virtual Python environment.  Only there is nothing "virtual" about it.  It's so not virtual that it in fact has it's own copy of the Python executable.  But the next two package say it all.  Number two is pip.
