@@ -1,16 +1,17 @@
 # Home
 
-Anthony Leotta GitHub Home Page - Notes Tutorials READMEs Procedures HowTos : C++ Python JavaScript SQL Docker NodeJS
+Anthony Leotta GitHub Home Page
 
-## Procedures
+Notes, Tutorials, READMEs, Procedures, HowTos for C++ Python JavaScript SQL Docker NodeJS
 
-1. [How to create a Anaconda Python Environment](#procedure-1-how-to-create-a-anaconda-python-environment)
+## Contents
 
-## Notes
+1. [How to create a Anaconda Python Environment](#procedure-how-to-create-a-anaconda-python-environment)
+1. [What is the anaconda base environment.](#note-what-is-the-anaconda-base-environment)
+1. [Setting the Python runtime in Visual Studio Code](#note-setting-the-python-runtime-in visual-studio-code)
 
-1. [What is the anaconda base environment.](#note-1-what-is-the-anaconda-base-environment)
 
-### Procedure 1. How to create a Anaconda Python Environment
+## Procedure - How to create a Anaconda Python Environment
 There are many ways to create a Python virtual environments, the advantage of using Anaconda is that you will not have to install a C compiler and build packages yourself.  Conda is stable and ahs few operational problems. (Note that install a C compiler on Windows using Visual Studio Code with also result in installing Python 2.7 and many other tools.)  If you want to get up and running ASAP, then Anaconda Python is a good choice.  There are other ways to manage packages and environments such as Poetry and PyEnv whic I will cover in other procedures.
 
 1. Install Anaconda on Windows
@@ -55,7 +56,7 @@ conda env remove --name myenv
 conda list
 ```
 
-### Note 1. What is the anaconda base environment.
+## Note - What is the anaconda base environment?
 
 If you type ```conda activate``` you will be dropped into teh base anaconda environment. One way to find out about this environment is to type ```conda list``` which will display all the packages that are installed by default.  A freshly created Anaconda package will have a "base" installation of Python packages.   The packages about to be downloaded and installed by the default package plan are listed when a new anaconda environment is about to be created.
 
@@ -105,3 +106,24 @@ Could it be #1 sqlite 3?
 Yes, that's right.  It's Python the only language with its own built-in in-memory file-based SQL relational database.  Instantaneously create as many relational databases as you need.  Most applications only need one, by the way. The fact that Python applications can use a relational database without installing any additional software only adds to the many people love the Python programming language.
 
 I think the main three packages are number one python, number two pip and number three setuptools.  The fact that a Python environment contains Python itself is the entire point of a virtual Python environment.  Only there is nothing "virtual" about it.  It's so not virtual that it in fact has it's own copy of the Python executable.  But the next two package say it all.  Number two is pip.
+
+## Note - Setting the Python runtime in Visual Studio Code
+
+1. Create a folder called .vscode
+
+1. add a file called settings.json if it does not already exist
+
+1. activate your Python environment
+
+1. do a which python to get the full path of your Pyrhoin executable
+
+1.  Add the key value pair python.pythonPath to the settings.json file.
+
+```
+{
+    "python.pythonPath": "/home/tonyl/anaconda3/envs/dev39/bin/python",
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+}
+
+```
