@@ -129,3 +129,28 @@ I think the main three packages are number one python, number two pip and number
 }
 
 ```
+
+## Setting the debug target of a C++ binary in Visual Studio Code
+
+1. Create a folder called .vscode
+
+1. add a file called launch.json if it does not already exist
+
+1. For a project with a Cmake target_sources of "hello".
+
+```
+    {
+            "name": "hello",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/hello_artefacts/Debug/hello.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "console": "externalTerminal"
+    },
+```
+
+1. The VS Code debugger will now add "hello" in its list of debug launch targets.
+
