@@ -158,7 +158,7 @@ I think the main three packages are number one python, number two pip and number
 
 ## How to pass arguments to a Debug target in VS Studio Code
 
-1. .vscode\launch.json add a args key value pair.
+1. In .vscode\launch.json add an args key value pair.
 
 ```
    {
