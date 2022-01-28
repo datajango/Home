@@ -11,7 +11,7 @@ My goals in developing software are to deliver quality reliable software that is
 1. [Setting the Python runtime in Visual Studio Code](#setting-the-python-runtime-in-visual-studio-code)
 1. [Setting the debug target of a C++ binary in Visual Studio Code](#setting-the-debug-target-of-a-c-binary-in-visual-studio-code)
 1. [How to pass arguments to a Debug target in VS Studio Code](#how-to-pass-arguments-to-a-debug-target-in-vs-studio-code)
-
+1. [How to add Boost C++ Library to A CMake project](#how-to-add-boost-c-library-to-a-cmake-project)
 
 ## How to create a Anaconda Python Environment
 There are many ways to create a Python virtual environments, the advantage of using Anaconda is that you will not have to install a C compiler and build packages yourself.  Conda is stable and ahs few operational problems. (Note that install a C compiler on Windows using Visual Studio Code with also result in installing Python 2.7 and many other tools.)  If you want to get up and running ASAP, then Anaconda Python is a good choice.  There are other ways to manage packages and environments such as Poetry and PyEnv whic I will cover in other procedures.
