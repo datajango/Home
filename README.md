@@ -6,12 +6,12 @@ Notes, Tutorials, READMEs, Procedures, HowTos for C++ Python JavaScript SQL Dock
 
 ## Contents
 
-1. [How to create a Anaconda Python Environment](#procedure-how-to-create-a-anaconda-python-environment)
-1. [What is the anaconda base environment.](#note-what-is-the-anaconda-base-environment)
-1. [Setting the Python runtime in Visual Studio Code](#note-setting-the-python-runtime-in visual-studio-code)
+1. [How to create a Anaconda Python Environment](#how-to-create-a-anaconda-python-environment)
+1. [What is the anaconda base environment.](#what-is-the-anaconda-base-environment)
+1. [Setting the Python runtime in Visual Studio Code](#setting-the-python-runtime-in-visual-studio-code)
 
 
-## Procedure - How to create a Anaconda Python Environment
+## How to create a Anaconda Python Environment
 There are many ways to create a Python virtual environments, the advantage of using Anaconda is that you will not have to install a C compiler and build packages yourself.  Conda is stable and ahs few operational problems. (Note that install a C compiler on Windows using Visual Studio Code with also result in installing Python 2.7 and many other tools.)  If you want to get up and running ASAP, then Anaconda Python is a good choice.  There are other ways to manage packages and environments such as Poetry and PyEnv whic I will cover in other procedures.
 
 1. Install Anaconda on Windows
@@ -56,7 +56,7 @@ conda env remove --name myenv
 conda list
 ```
 
-## Note - What is the anaconda base environment?
+## What is the anaconda base environment?
 
 If you type ```conda activate``` you will be dropped into teh base anaconda environment. One way to find out about this environment is to type ```conda list``` which will display all the packages that are installed by default.  A freshly created Anaconda package will have a "base" installation of Python packages.   The packages about to be downloaded and installed by the default package plan are listed when a new anaconda environment is about to be created.
 
@@ -107,7 +107,7 @@ Yes, that's right.  It's Python the only language with its own built-in in-memor
 
 I think the main three packages are number one python, number two pip and number three setuptools.  The fact that a Python environment contains Python itself is the entire point of a virtual Python environment.  Only there is nothing "virtual" about it.  It's so not virtual that it in fact has it's own copy of the Python executable.  But the next two package say it all.  Number two is pip.
 
-## Note - Setting the Python runtime in Visual Studio Code
+## Setting the Python runtime in Visual Studio Code
 
 1. Create a folder called .vscode
 
