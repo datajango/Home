@@ -1,8 +1,6 @@
-# Home
+# Home - Tony's Tricks - Anthony Leotta GitHub Home Page
 
-Anthony Leotta GitHub Home Page
-
-Notes, Tutorials, READMEs, Procedures, HowTos for C++ Python JavaScript SQL Docker NodeJS
+Here you will find notes, tutorials, READMEs, procedures, how to's for C++ Python JavaScript SQL Docker NodeJS and other stuff.
 
 My goals in developing software are to deliver quality reliable software that is maintainable and testable.   I want to share all the little tasks I perform in setting up Python and C++ projects so that they can be built on Mac, Windows, Linux, AWS EC2, AWS Lambda, Linode, Digital Ocean, Andriod, IoS, Rasberry Pi and ESP32.
 
@@ -179,4 +177,28 @@ I think the main three packages are number one python, number two pip and number
             "--filter_nulls=Y",
         ]
     },
+```
+## How to add Boost C++ Library to A CMake project
+
+1. Download Boost for yoru system
+
+1. In CMakeLists.txt, set Boost_INCLUDE_DIR to the location you downloaded and unzipped Boost
+
+1. In CMakeLists.txt, add find_package and INCLUDE_DIRECTORIES for boost.
+
+1. Example:
+```
+set(Boost_INCLUDE_DIR G:/music-dev/projects/boost_1_78_0)
+find_package(Boost 1.78.0)
+INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
+```
+
+1. In a C++ file you may now include Boost include files.
+
+```
+#include <boost/format.hpp>
+
+void Rectangle::report() {
+    std::cout << boost::format("%1% (%2% %3% %4% %5%) \n") % name % x % y % w % h;
+}
 ```
