@@ -11,6 +11,7 @@ My goals in developing software are to deliver quality reliable software that is
 1. [How to create a Anaconda Python Environment](#how-to-create-a-anaconda-python-environment)
 1. [What is the anaconda base environment.](#what-is-the-anaconda-base-environment)
 1. [Setting the Python runtime in Visual Studio Code](#setting-the-python-runtime-in-visual-studio-code)
+1. [Setting the debug target of a C++ binary in Visual Studio Code](setting-the-debug-target-of-a-c-binary-in-visual-studio-code)
 
 
 ## How to create a Anaconda Python Environment
