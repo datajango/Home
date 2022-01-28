@@ -4,6 +4,8 @@ Anthony Leotta GitHub Home Page
 
 Notes, Tutorials, READMEs, Procedures, HowTos for C++ Python JavaScript SQL Docker NodeJS
 
+My goals in developing software are to deliver quality reliable software that is maintainable and testable.   I want to share all the little tasks I perform in setting up Python and C++ projects so that they can be built on Mac, Windows, Linux, AWS EC2, AWS Lambda, Linode, Digital Ocean, Andriod, IoS, Rasberry Pi and ESP32.
+
 ## Contents
 
 1. [How to create a Anaconda Python Environment](#how-to-create-a-anaconda-python-environment)
