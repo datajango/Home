@@ -155,3 +155,27 @@ I think the main three packages are number one python, number two pip and number
 
 1. The VS Code debugger will now add "hello" in its list of debug launch targets.
 
+## How to pass arguments to a Debug target in VS Studio Code
+
+1. .vscode\launch.json add a args key value pair.
+
+```
+   {
+        "name": "reverse 01",
+        "type": "python",
+        "request": "launch",
+        "program": "${workspaceFolder}/datagen/scripts/dg.py",
+        "console": "integratedTerminal",
+        "cwd": "${workspaceFolder}",
+        "args": [
+            "reverse",
+            "--server=postgresql",
+            "--hostname=localhost",
+            "--username=practice",
+            "--password=<<YOUR PASSWORD>>",
+            "--database=adventureworks",
+            "--port=5432",
+            "--filter_nulls=Y",
+        ]
+    },
+```
