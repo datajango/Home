@@ -12,6 +12,7 @@ My goals in developing software are to deliver quality reliable software that is
 1. [Setting the debug target of a C++ binary in Visual Studio Code](#setting-the-debug-target-of-a-c-binary-in-visual-studio-code)
 1. [How to pass arguments to a Debug target in VS Studio Code](#how-to-pass-arguments-to-a-debug-target-in-vs-studio-code)
 1. [How to add Boost C++ Library to A CMake project](#how-to-add-boost-c-library-to-a-cmake-project)
+1. [Pytest Debugging in VS Code](#pytest-debugging-in-vs-code)
 
 ## How to create a Anaconda Python Environment
 There are many ways to create a Python virtual environments, the advantage of using Anaconda is that you will not have to install a C compiler and build packages yourself.  Conda is stable and ahs few operational problems. (Note that install a C compiler on Windows using Visual Studio Code with also result in installing Python 2.7 and many other tools.)  If you want to get up and running ASAP, then Anaconda Python is a good choice.  There are other ways to manage packages and environments such as Poetry and PyEnv whic I will cover in other procedures.
@@ -19,10 +20,18 @@ There are many ways to create a Python virtual environments, the advantage of us
 1. Install Anaconda on Windows
     1. Follow this [Installing on Windows](https://docs.anaconda.com/anaconda/install/windows/)
 
-1. Create a fresh Anaconda virtual wnvironment
+1. Create a fresh Anaconda virtual environment
 
 ```
 conda create --name myenv python=3.9
+```
+
+1.a. Updating
+
+You may be asked to update conda.  I have had some issues updating conda to the latest version.
+
+```
+conda update -n base -c defaults conda
 ```
 
 1. To activate the environment
@@ -202,3 +211,56 @@ void Rectangle::report() {
     std::cout << boost::format("%1% (%2% %3% %4% %5%) \n") % name % x % y % w % h;
 }
 ```
+
+## Pytest Debugging in VS Code
+
+1. add the following to .vscode\settings.json
+    ```
+    {
+        "python.pythonPath": "<<<PATH TO YOUR PYTHON>>>",
+        "python.testing.unittestEnabled": false,
+        "python.testing.nosetestsEnabled": false,
+        "python.testing.pytestEnabled": true,
+        "python.testing.pytestArgs": [
+            "--pdb"
+        ],
+        "git.ignoreLimitWarning": false
+    }
+    ```
+
+1. add this to your .vscode\launch.json
+
+    ```
+    {
+        "name": "PyTest",
+        "type": "python",
+        "request": "launch",
+        "stopOnEntry": false,
+        "module": "pytest",
+        "args": [
+            "-sv"
+        ],
+        "cwd": "${workspaceRoot}",
+        "env": {},
+        "envFile": "${workspaceRoot}/.env",
+        "debugOptions": [
+            "WaitOnAbnormalExit",
+            "WaitOnNormalExit",
+            "RedirectOutput"
+        ]
+    },
+    ```
+
+## Using setup tools to add a shell command for a Python program
+
+## Adding a Python module to a Python Environment
+
+## Sharing Python modules
+
+## Configuring JUCE C++ in CMake
+
+
+
+
+
+
